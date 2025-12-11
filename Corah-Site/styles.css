@@ -69,7 +69,7 @@ header {
     color: white;
 }
 .nav-pill a:visited{
-
+  font-family: "Open Sans";
 }
 .brand-logo{
     text-decoration: none;
