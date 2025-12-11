@@ -37,6 +37,11 @@ header {
     gap: 16px;
     align-items: center;
 }
+.nav-container ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
 .nav-pill a{
     display: inline;
     padding: 8px 16px;
@@ -50,7 +55,7 @@ header {
 }
 
 .nav-pill a:link{
-    color: ;
+    color: white ;
 }
 
 .nav-pill a:active{
@@ -69,7 +74,54 @@ header {
 .brand-logo{
     text-decoration: none;
 }
+.hero {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+.hero-container{
+    display: flex;
+    
+}
+.hero-text{
+    border: 1px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.hero-image{
+    padding: 16px 8px;
+    width: auto;
+    display: block;
+    max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover;
+}
+/* Larger viewports: two columns */
+@media (min-width: 768px) {
+  .hero { grid-template-columns: 1fr 1fr; }
+}
+footer {
+  background-color: #7b458f;
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+}
 
-.word-mark{
+@media (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+/* Small devices (phones) */
+@media (max-width: 576px) {
+  header { flex-direction: column; }
+  .nav-container ul { flex-direction: column; }
+  .hero { grid-template-columns: 1fr; }
+}
+/* .word-mark{
 
 }
