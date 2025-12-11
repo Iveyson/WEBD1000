@@ -1,21 +1,17 @@
 html {
-    background-color:white;
-    font-family:"Open Sans";
+    background-color: white;
+    font-family: "Open Sans";
 }
 
 body {
-    background-color:white;
+    background-color: white;
 }
 
 header {
     display: flex;
     flex-direction: column;
-    align-self: stretch;
     gap: 32px;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 32px;
-    padding-bottom: 8px;
+    padding: 32px 32px 8px 32px;
 }
 
 .separator {
@@ -31,19 +27,20 @@ header {
     justify-content: space-between;
 }
 
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
 .nav-container {
     display: flex;
     flex-direction: row;
     gap: 16px;
     align-items: center;
+    flex-wrap: wrap;
 }
-.nav-container ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-}
-.nav-pill a{
-    display: inline;
+
+.nav-pill a {
     padding: 8px 16px;
     border-radius: 32px;
     text-decoration: none;
@@ -54,74 +51,62 @@ header {
     border-width: 2px;
 }
 
-.nav-pill a:link{
-    color: white ;
+.nav-pill a:active {
+    background: #420e53;
+    color: #ffffff;
+    text-decoration: underline;
 }
 
-.nav-pill a:active{
-    background: color #420e53;;
-    color:#ffffff;
-    text-decoration: underline;
-    text-decoration-color: #9b81a4;
-}
-.nav-pill a:hover{
-    background-color:#420e53;
+.nav-pill a:hover {
+    background-color: #420e53;
     color: white;
 }
-.nav-pill a:visited{
-  font-family: "Open Sans";
-}
-.brand-logo{
-    text-decoration: none;
-}
+
 .hero {
-  display: grid;
-  gap: 2rem;
-  align-items: center;
-  padding: 2rem;
-  overflow: hidden;
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    overflow: hidden;
 }
-.hero-container{
-    display: flex;
-    
+
+.hero-text {
+    padding: 0 16px;
 }
-.hero-text{
-    border: 1px;
-    padding-right: 16px;
-    padding-left: 16px;
-}
-.hero-image{
-    padding: 16px 8px;
-    width: auto;
-    display: block;
-    max-width: 100%; /* Ensures the image doesn't exceed its container's width */
-    height: auto; /* Maintains aspect ratio */
+
+.hero-image img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
-/* Larger viewports: two columns */
+
 @media (min-width: 768px) {
-  .hero { grid-template-columns: 1fr 1fr; }
+    .hero {
+        grid-template-columns: 1fr 1fr;
+    }
 }
+
 footer {
-  background-color: #7b458f;
-  color: #fff;
-  padding: 1.5rem;
-  text-align: center;
+    background-color: #7b458f;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
-/* Small devices (phones) */
-@media (max-width: 576px) {
-  header { flex-direction: column; }
-  .nav-container ul { flex-direction: column; }
-  .hero { grid-template-columns: 1fr; }
-}
-/* .word-mark{
 
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
